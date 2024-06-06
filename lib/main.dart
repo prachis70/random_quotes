@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:random_quotes/screens/Frist_page.dart';
 void main()
 {
-  runApp(Random_quotes());
+  runApp(MyApp());
 }
-class Random_quotes extends StatelessWidget {
-  const Random_quotes({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -2,7 +2,10 @@ import 'dart:math';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:random_quotes/utils/Global_var.dart';
+
 import 'package:random_quotes/utils/quote_data.dart';
+
+import '../utils/Global_var.dart';
 
 QuoteModel? quoteModel;
 
@@ -14,14 +17,14 @@ class Quotes extends StatefulWidget {
 }
 
 class _QuotesState extends State<Quotes> {
+  @override
   void initState()
   {
-    quoteModel = QuoteModel();
-    quoteModel!.quoteModelToList(quotelist);
-
+    quoteModel=QuoteModel.toList(quotelist);
     super.initState();
   }
   @override
+
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.black,
@@ -32,22 +35,31 @@ class _QuotesState extends State<Quotes> {
       body: SingleChildScrollView(
         child: Column(
           children: List.generate(quoteModel!.quoteModelist.length, (index) => Card(
+            color: colorList[index%colorList.length],
             child:ListTile(
-              title: Text(quoteModel!.quoteModelist[index].author!),
+              title: Text(quoteModel!.quoteModelist[index].quote!),
               subtitle: Text(quoteModel!.quoteModelist[index].author!),
+              // title: Text(quoteModel.quoteModelist[index].quotes),
+              // //subtitle: Text(quoteModel!.quoteModelist[index].author!),
+
+
             )
           ))
         ),
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          setState(() {
+            index++;
+          });
           Random random=Random();
           int x=random.nextInt(quoteModel!.quoteModelist.length);
 
           showDialog(context: context, builder: (context) {
             return AlertDialog(
+              backgroundColor: colorList[x%colorList.length],
               title: Text(quoteModel!.quoteModelist[x].author!),
-              content: Text(quoteModel!.quoteModelist[x].quotes!),
+              content: Text(quoteModel!.quoteModelist[x].quote!),
 
               actions: [
                 TextButton(onPressed: () {
@@ -61,7 +73,9 @@ class _QuotesState extends State<Quotes> {
           },
           );
         },
+        child: Icon(Icons.next_plan),
       ),
     );
   }
 }
+int index=0;
