@@ -75,6 +75,7 @@ class _ToggleState extends State<Toggle> {
               ListTile(
                 title: Text(quoteModel!.quoteModelist[index].quote!),
                 subtitle: Text(quoteModel!.quoteModelist[index].author!),
+
               )
             ]),
 
