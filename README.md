@@ -10,7 +10,7 @@
   <video src = ""heigth=22% width=32%>
 </p>
 
-# Rendom
+# Random
 <p>
    <img src ="https://github.com/prachis70/random_quotes/assets/149580593/5125a603-97c8-41a7-88c0-84a4283d77f4" heigth=22% width=32%>
   <img src ="https://github.com/prachis70/random_quotes/assets/149580593/6f52ebd0-9127-4e7b-b5f2-4b3364901ee8"heigth=22% width=32%>
