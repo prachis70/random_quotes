@@ -27,6 +27,7 @@ QuoteModel.toList(List l1)
     {
       quoteModelist.add(QuoteModel.fromQuotes(l1[i]));
     }
+
 }
   //
   // static QuoteModel? toList(quotesList) {}
