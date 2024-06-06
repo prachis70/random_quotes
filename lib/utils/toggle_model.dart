@@ -14,16 +14,16 @@ class QuoteModel
   }
 
 
-QuoteModel.toList(List l1)
-{
-  for(int i=0;i<l1.length;i++)
+  QuoteModel.toList(List l1)
+  {
+    for(int i=0;i<l1.length;i++)
     {
       quoteModelist.add(QuoteModel.fromQuotes(l1[i]));
     }
 
-}
-  //
-  // static QuoteModel? toList(quotesList) {}
+  }
+//
+// static QuoteModel? toList(quotesList) {}
 
 }
 List colorList=[
